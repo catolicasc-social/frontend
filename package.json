@@ -16,13 +16,17 @@
     "prettier": "^1.16.4"
   },
   "dependencies": {
+    "dotenv": "^7.0.0",
+    "firebase": "^5.9.0",
     "evergreen-ui": "^4.14.0",
     "next": "^8.0.3",
+    "next-auth": "^1.12.1",
+    "passport-google-oauth": "^2.0.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3"
   },
   "scripts": {
-    "dev": "next ./src",
+    "dev": "next ./src ",
     "now-build": "next build ./src && next export ./src -o dist",
     "lint": "eslint ."
   },

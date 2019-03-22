@@ -1,10 +1,14 @@
-import Input from '../components/commons/Input';
+import React from 'react'
+import Page from '../components/page'
+import Layout from '../components/layout'
 
-const Home = () => (
-  <div>
-    <div>Olá :)</div>
-    <Input name="name" placeholder="Text input placeholder..." />
-  </div>
-);
 
-export default Home;
+export default class extends Page {
+  render() {
+    return (
+      <Layout {...this.props} navmenu={false} container={false}>
+        <div>Index.js</div>
+      </Layout>
+    )
+  }
+}
