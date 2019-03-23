@@ -26,7 +26,7 @@
     "react-dom": "^16.8.3"
   },
   "scripts": {
-    "dev": "next ./src ",
+    "dev": "next ./src",
     "now-build": "next build ./src && next export ./src -o dist",
     "lint": "eslint ."
   },

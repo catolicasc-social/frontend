@@ -1,9 +1,5 @@
 /* eslint-disable react/no-deprecated */
 
-/**
- * Creating a page named _error.js lets you override HTTP error messages
- */
-
 import React from 'react';
 import Link from 'next/link';
 import { withRouter } from 'next/router';
@@ -24,7 +20,7 @@ class ErrorPage extends React.Component {
   render() {
     let response;
     switch (this.props.errorCode) {
-      case 200: // Also display a 404 if someone requests /_error explicitly
+      case 200:
       case 404:
         response = (
           <div>

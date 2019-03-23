@@ -1,14 +1,20 @@
-import React from 'react'
-import Page from '../components/page'
-import Layout from '../components/layout'
+import { Component } from 'react';
+import { NextAuth } from 'next-auth/client';
+import Page from '../layouts/page';
 
+export default class extends Component {
+  static async getInitialProps({ req }) {
+    return {
+      session: await NextAuth.init({ req }),
+      lang: 'pt-br'
+    };
+  }
 
-export default class extends Page {
   render() {
     return (
-      <Layout {...this.props} navmenu={false} container={false}>
-        <div>Index.js</div>
-      </Layout>
-    )
+      <Page>
+        <h1>index</h1>
+      </Page>
+    );
   }
 }
