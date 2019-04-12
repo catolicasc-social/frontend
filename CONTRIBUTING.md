@@ -4,7 +4,7 @@ Sinta-se livre para ajudar o projeto :D
 
 # Contribuindo
 
-1. Fork it!
+1. Clone it!
 2. Crie uma branch: `git checkout -b minha-feature`
 3. Inclua suas alterações (commit): `git commit -m 'adicionando alguma feature'`
 4. Insira na branch: `git push origin minha-feature`
