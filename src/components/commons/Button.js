@@ -1,9 +1,7 @@
 import { Button } from 'evergreen-ui';
 
-const ButtonCustom = ({ children, appearance, intent }) => (
-  <Button appearance={appearance} intent={intent}>
-    {children}
-  </Button>
+const ButtonCustom = ({ children, appearance, intent, isLoading, onClick }) => (
+  <Button {...{ isLoading, intent, appearance, onClick }}>{children}</Button>
 );
 
 // eslint-disable-next-line import/prefer-default-export
