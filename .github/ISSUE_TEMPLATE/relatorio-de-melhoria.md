@@ -3,7 +3,7 @@ name: Relatório de melhoria
 about: Crie um relatório sobre a melhoria a ser feita
 title: ''
 labels: melhoria
-assignees: murillo94
+assignees: ''
 
 ---
 

@@ -3,7 +3,7 @@ name: Relatório de feature
 about: Sugira ideias para melhorar o sistema
 title: ''
 labels: feature
-assignees: murillo94
+assignees: ''
 
 ---
 

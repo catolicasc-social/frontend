@@ -3,7 +3,7 @@ name: Relatório de bug
 about: Crie um relatório sobre o bug para ajudar a melhorar o sistema
 title: ''
 labels: bug
-assignees: murillo94
+assignees: ''
 
 ---
 
