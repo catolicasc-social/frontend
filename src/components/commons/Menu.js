@@ -53,7 +53,7 @@ const Menu = () => (
   <nav>
     <div className="wrapper">
       <div className="navigation">
-        <img src="/static/logo.png" alt="logo" height="30px" width="30px" />
+        <img src="/static/logo.png" alt="Logo" />
         <MenuLink href="/index" text="Dashboard" icon="list-detail-view" />
         <MenuLink href="/products" text="Produtos" icon="list-detail-view" />
       </div>
@@ -71,6 +71,8 @@ const Menu = () => (
 
         img {
           margin: 2px 0 18px;
+          height: 38px;
+          width: 38px;
         }
 
         .wrapper {

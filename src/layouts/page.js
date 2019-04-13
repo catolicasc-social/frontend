@@ -19,6 +19,8 @@ export default class extends Component {
       <>
         <Head>
           <title>Restaurante Popular</title>
+
+          <link rel="icon" href="../static/logo.png" type="image/png" />
         </Head>
         <Content>{children}</Content>
       </>
