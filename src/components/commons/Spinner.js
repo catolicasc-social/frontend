@@ -1,6 +1,11 @@
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable react/jsx-wrap-multilines */
 import { Spinner } from 'evergreen-ui';
 
-const SpinnerCustom = ({ size }) => <Spinner size={size} />;
+const SpinnerCustom = ({ size, marginX, marginY, delay, children }) => (
+  <Spinner marginX={marginX} marginY={marginY} size={size} delay={delay}>
+    {children}
+  </Spinner>
+);
 
-// eslint-disable-next-line import/prefer-default-export
 export { SpinnerCustom as Spinner };
