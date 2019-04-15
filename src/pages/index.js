@@ -1,14 +1,5 @@
-import React from 'react'
-import Page from '../components/page'
-import Layout from '../components/layout'
+import Page from '../layouts/page';
 
+const Index = () => <Page>dashboard</Page>;
 
-export default class extends Page {
-  render() {
-    return (
-      <Layout {...this.props} navmenu={false} container={false}>
-        <div>Index.js</div>
-      </Layout>
-    )
-  }
-}
+export default Index;
