@@ -3,7 +3,7 @@ import { Heading } from 'evergreen-ui';
 const Header = () => (
   <header>
     <Heading size={500} color="#425A70">
-      Dashboard
+      Teste
     </Heading>
 
     <style jsx>
