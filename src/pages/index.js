@@ -1,5 +1,5 @@
 import Page from '../layouts/page';
 
-const Index = () => <Page>dashboard</Page>;
+const Index = () => <Page title="Dashboard">dashboard</Page>;
 
 export default Index;

@@ -1,9 +1,9 @@
 import { Heading } from 'evergreen-ui';
 
-const Header = () => (
+const Header = ({ title }) => (
   <header>
     <Heading size={500} color="#425A70">
-      Teste
+      {title}
     </Heading>
 
     <style jsx>
