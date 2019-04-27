@@ -1,6 +1,6 @@
 {
   "version": 2,
   "name": "restaurante-popular",
-  "alias": ["https://restaurante-popular.now.sh"],
+  "alias": "restaurante-popular",
   "builds": [{ "src": "package.json", "use": "@now/static-build" }]
 }
