@@ -13,7 +13,7 @@ export default class extends Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { children, title } = this.props;
 
     return (
       <>
@@ -22,7 +22,7 @@ export default class extends Component {
 
           <link rel="icon" href="../static/logo.png" type="image/png" />
         </Head>
-        <Content>{children}</Content>
+        <Content title={title}>{children}</Content>
       </>
     );
   }
