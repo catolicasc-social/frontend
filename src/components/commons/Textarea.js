@@ -1,7 +1,6 @@
 import { Textarea } from 'evergreen-ui';
 
-const textarea = ({ id, placeholder, width }) => (
-  <Textarea id={id} placeholder={placeholder} width={width} />
-);
+const TextareaCustom = ({ ...props }) => <Textarea {...props} />;
 
-export default textarea;
+// eslint-disable-next-line import/prefer-default-export
+export { TextareaCustom as Textarea };

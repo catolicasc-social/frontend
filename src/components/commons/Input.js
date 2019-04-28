@@ -1,7 +1,5 @@
 import { TextInput } from 'evergreen-ui';
 
-const Input = ({ name, placeholder }) => (
-  <TextInput name={name} placeholder={placeholder} />
-);
+const Input = ({ ...props }) => <TextInput {...props} />;
 
 export default Input;

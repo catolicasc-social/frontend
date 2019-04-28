@@ -1,7 +1,6 @@
 import { SearchInput } from 'evergreen-ui';
 
-const searchInput = ({ placeholder, height, width }) => (
-  <SearchInput placeholder={placeholder} height={height} width={width} />
-);
+const SearchInputCustom = ({ ...props }) => <SearchInput {...props} />;
 
-export default searchInput;
+// eslint-disable-next-line import/prefer-default-export
+export { SearchInputCustom as SearchInput };
