@@ -13,7 +13,7 @@
     "eslint-plugin-react": "^7.12.4",
     "husky": "^2.1.0",
     "lint-staged": "^8.1.5",
-    "prettier": "^1.16.4"
+    "prettier": "^1.17.0"
   },
   "dependencies": {
     "dotenv": "^7.0.0",
