@@ -3,52 +3,58 @@ import Link from 'next/link';
 import { Icon, Text } from 'evergreen-ui';
 
 const Menu = () => {
-  const MenuLink = withRouter(({ router, href, icon, text, last = false }) => (
-    <Link prefetch href={href}>
-      <a className="tab">
-        <figure>
-          <Icon
-            icon={icon}
-            size={16}
-            color="#fff"
-            display="block"
-            margin="auto"
-          />
-        </figure>
-        <Text color="#fff">{text}</Text>
+  const MenuLink = withRouter(({ router, href, icon, text, last = false }) => {
+    const isActive = router.pathname.match(href);
 
-        <style jsx>
-          {`
-            figure {
-              margin: 0 0 10px;
-            }
+    return (
+      <Link prefetch href={href}>
+        <a className="tab">
+          <figure>
+            <Icon
+              icon={icon}
+              size={16}
+              color="#fff"
+              display="block"
+              margin="auto"
+            />
+          </figure>
+          <Text color="#fff">{text}</Text>
 
-            a {
-              text-decoration: none;
-              color: '#fff';
-            }
+          <style jsx>
+            {`
+              figure {
+                margin: 0 0 10px;
+              }
 
-            .tab {
-              background-color: ${router.pathname.match(href)
-                ? '#234361'
-                : 'transparent'};
-              display: flex;
-              align-items: center;
-              flex-direction: column;
-              cursor: pointer;
-              transition: background-color 0.2s ease-in-out 0s;
-              padding: 10px;
-              margin-bottom: ${last ? '0' : '10px'};
-            }
+              a {
+                text-decoration: none;
+              }
 
-            .tab:hover {
-              background-color: #7b8ea0 !important;
-            }
-          `}
-        </style>
-      </a>
-    </Link>
-  ));
+              .tab {
+                background-color: ${isActive ? '#324c64' : 'transparent'};
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding: 10px;
+                margin-bottom: ${last ? '0' : '10px'};
+                cursor: pointer;
+                opacity: ${isActive ? '1' : '.8'};
+                transition: background-color 0.12s ease;
+              }
+
+              .tab:hover {
+                opacity: 1;
+              }
+
+              .tab:active {
+                background-color: #2d445a;
+              }
+            `}
+          </style>
+        </a>
+      </Link>
+    );
+  });
 
   return (
     <nav>
