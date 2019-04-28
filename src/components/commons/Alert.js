@@ -1,8 +1,6 @@
 import { Alert } from 'evergreen-ui';
 
-const AlertDefault = ({ title, intent, marginBottom }) => (
-  <Alert intent={intent} title={title} marginBottom={marginBottom} />
-);
+const AlertDefault = ({ ...props }) => <Alert {...props} />;
 
 // eslint-disable-next-line import/prefer-default-export
 export { AlertDefault as Alert };

@@ -1,7 +1,7 @@
 import { Heading } from 'evergreen-ui';
 
-const HeadingCustom = ({ children, size }) => (
-  <Heading size={size}>{children}</Heading>
+const HeadingCustom = ({ children, ...props }) => (
+  <Heading {...props}>{children}</Heading>
 );
 
 // eslint-disable-next-line import/prefer-default-export
