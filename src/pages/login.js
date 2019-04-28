@@ -49,7 +49,6 @@ const Login = () => (
           margin-top: 10vh;
           text-align: center;
         }
-
         .div-Center {
           display: flex;
           border-radius: 3rem;
@@ -62,7 +61,6 @@ const Login = () => (
           height: 40vh;
           width: 25vw;
         }
-
         .container {
           width: 100%;
           height: 100%;
