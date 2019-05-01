@@ -1,6 +1,6 @@
 # frontend
 
-[![Build Status](https://badge.buildkite.com/192b4cb2485dc8413258a813f6490604ebb407442c64f4a43f.svg)](https://buildkite.com/catolicasc-social/frontend?branch=master)
+[![CircleCI](https://circleci.com/gh/catolicasc-social/frontend.svg?style=svg)](https://circleci.com/gh/catolicasc-social/frontend)
 
 Aplicação frontend para projeto social de um restaurante popular.
 
@@ -12,6 +12,14 @@ Aplicação frontend para projeto social de um restaurante popular.
 #### Deploy
 
 - [Now](https://zeit.co/now)
+
+#### CI
+
+- [CircleCI](https://circleci.com)
+
+#### Bots
+
+- [Dependabot](https://dependabot.com/)
 
 ## Usando localmente
 
@@ -27,6 +35,10 @@ Aplicação frontend para projeto social de um restaurante popular.
 - `yarn dev`
 
 Depois dos comandos executados, ir para http://localhost:3000
+
+## Contribuindo
+
+Siga os passos [aqui](CONTRIBUTING.md) para saber como contribuir com o projeto.
 
 ## url
 
