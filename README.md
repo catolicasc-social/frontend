@@ -13,7 +13,7 @@ Aplicação frontend para projeto social de um restaurante popular.
 
 - [Now](https://zeit.co/now)
 
-#### CI
+#### Integração contínua (CI)
 
 - [CircleCI](https://circleci.com)
 
