@@ -13,6 +13,14 @@ Aplicação frontend para projeto social de um restaurante popular.
 
 - [Now](https://zeit.co/now)
 
+#### CI
+
+- [CircleCI](https://circleci.com)
+
+#### Bots
+
+- [Dependabot](https://dependabot.com/)
+
 ## Usando localmente
 
 #### Necessário
@@ -27,6 +35,10 @@ Aplicação frontend para projeto social de um restaurante popular.
 - `yarn dev`
 
 Depois dos comandos executados, ir para http://localhost:3000
+
+## Contribuindo
+
+Siga os passos [aqui](CONTRIBUTING.md) para saber como contribuir com o projeto.
 
 ## url
 
