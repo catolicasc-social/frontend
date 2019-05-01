@@ -28,7 +28,8 @@
   "scripts": {
     "dev": "next ./src",
     "now-build": "next build ./src && next export ./src -o dist",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "echo 'TODO'"
   },
   "husky": {
     "hooks": {

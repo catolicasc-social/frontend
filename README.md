@@ -1,6 +1,6 @@
 # frontend
 
-[![Build Status](https://badge.buildkite.com/192b4cb2485dc8413258a813f6490604ebb407442c64f4a43f.svg)](https://buildkite.com/catolicasc-social/frontend?branch=master)
+[![CircleCI](https://circleci.com/gh/catolicasc-social/frontend.svg?style=svg)](https://circleci.com/gh/catolicasc-social/frontend)
 
 Aplicação frontend para projeto social de um restaurante popular.
 
