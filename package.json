@@ -31,7 +31,15 @@
     "dev": "next ./src",
     "now-build": "next build ./src && next export ./src -o dist",
     "lint": "eslint .",
-    "test": "jest --passWithNoTests"
+    "test": "jest"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "testMatch": [
+      "**/__tests__/*.test.js?(x)"
+    ]
   },
   "husky": {
     "hooks": {
