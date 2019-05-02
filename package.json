@@ -5,6 +5,7 @@
   "repository": "git@github.com:catolicasc-social/frontend.git",
   "license": "MIT",
   "devDependencies": {
+    "codecov": "^3.3.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.2.0",
@@ -12,6 +13,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "husky": "^2.1.0",
+    "jest": "^24.7.1",
     "lint-staged": "^8.1.5",
     "prettier": "^1.17.0"
   },
@@ -29,7 +31,15 @@
     "dev": "next ./src",
     "now-build": "next build ./src && next export ./src -o dist",
     "lint": "eslint .",
-    "test": "echo 'TODO'"
+    "test": "jest"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "testMatch": [
+      "**/__tests__/*.test.js?(x)"
+    ]
   },
   "husky": {
     "hooks": {

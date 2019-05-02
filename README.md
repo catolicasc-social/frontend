@@ -1,6 +1,7 @@
 # frontend
 
 [![CircleCI](https://circleci.com/gh/catolicasc-social/frontend.svg?style=svg)](https://circleci.com/gh/catolicasc-social/frontend)
+[![codecov](https://codecov.io/gh/catolicasc-social/frontend/branch/master/graph/badge.svg)](https://codecov.io/gh/catolicasc-social/frontend)
 
 Aplicação frontend para projeto social de um restaurante popular.
 
