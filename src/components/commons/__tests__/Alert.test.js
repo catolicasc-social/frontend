@@ -1,5 +1,5 @@
 test('initial test', () => {
-  const n = 1;
+  const n = 10;
 
-  expect(n).toBe(1);
+  expect(n).toBe(10);
 });
