@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import Router from 'next/router';
 import { Icon } from 'evergreen-ui';
 
