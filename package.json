@@ -20,7 +20,7 @@
   "dependencies": {
     "dotenv": "^8.0.0",
     "evergreen-ui": "^4.15.0",
-    "firebase": "^5.11.1",
+    "firebase": "^6.0.0",
     "next": "^8.1.0",
     "next-auth": "^1.12.1",
     "passport-google-oauth": "^2.0.0",
