@@ -1,4 +1,4 @@
-import { Heading } from 'evergreen-ui';
+import { Heading } from './Heading';
 
 const Header = ({ title }) => (
   <header>

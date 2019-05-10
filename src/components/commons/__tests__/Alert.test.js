@@ -1,14 +1,25 @@
-import { render, cleanup } from 'react-testing-library';
-import 'jest-dom/extend-expect';
+import { render } from 'react-testing-library';
 
 import { Alert } from '../Alert';
 
-afterEach(cleanup);
+describe('Alerta deve', () => {
+  test('renderizar', () => {
+    const { container } = render(<Alert />);
 
-test('initial test', () => {
-  const { getByText } = render(
-    <Alert title="Produto cadastrado com sucesso" />
-  );
+    expect(container).toBeInTheDocument();
+  });
 
-  expect(getByText('Produto cadastrado com sucesso')).toBeInTheDocument();
+  test('ter título', () => {
+    const { getByText } = render(
+      <Alert title="Produto cadastrado com sucesso" />
+    );
+
+    expect(getByText('Produto cadastrado com sucesso')).toBeInTheDocument();
+  });
+
+  test('ter descrição', () => {
+    const { getByText } = render(<Alert>Salvo com sucesso!</Alert>);
+
+    expect(getByText('Salvo com sucesso!')).toBeInTheDocument();
+  });
 });
