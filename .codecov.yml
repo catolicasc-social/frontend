@@ -1,8 +1,8 @@
 coverage:
   range: 50...100
   status:
-    project:
-      project:
-        paths:
-          - src*
+    patch: off
+    changes: off
+  fixes:
+    - '::src/'
 comment: off
