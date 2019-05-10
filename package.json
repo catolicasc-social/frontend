@@ -53,6 +53,9 @@
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/"
     ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.js"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
     ]
