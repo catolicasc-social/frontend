@@ -10,18 +10,6 @@ const Content = ({ children, title, padding = 20 }) => (
       <Header title={title} />
       <Pane padding={padding}>{children}</Pane>
     </Pane>
-
-    <style jsx global>
-      {`
-        body {
-          margin: 0;
-          font-family: 'SF UI Text', -apple-system, BlinkMacSystemFont,
-            'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
-            'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-          color: #fff;
-        }
-      `}
-    </style>
   </Pane>
 );
 

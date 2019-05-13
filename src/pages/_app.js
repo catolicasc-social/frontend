@@ -1,7 +1,6 @@
 import React from 'react';
 import App, { Container } from 'next/app';
 import Head from 'next/head';
-// import { NextAuth } from 'next-auth/client';
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -14,13 +13,6 @@ class MyApp extends App {
     return { pageProps };
   }
 
-  /* static async getInitialProps({ req }) {
-    return {
-      session: await NextAuth.init({ req }),
-      lang: 'pt-br'
-    };
-  } */
-
   render() {
     const { Component, pageProps } = this.props;
 
@@ -32,6 +24,18 @@ class MyApp extends App {
           <link rel="icon" href="/static/logo.png" type="image/png" />
         </Head>
         <Component {...pageProps} />
+
+        <style jsx global>
+          {`
+            body {
+              margin: 0;
+              font-family: 'SF UI Text', -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+                'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+              color: #fff;
+            }
+          `}
+        </style>
       </Container>
     );
   }
