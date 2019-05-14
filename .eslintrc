@@ -1,18 +1,21 @@
 {
-  "plugins": ["react", "jsx-a11y"],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true,
-      "modules": true
-    }
-  },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
     "airbnb",
     "prettier"
   ],
+  "plugins": ["react", "jsx-a11y"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "jsx": true,
+      "modules": true
+    }
+  },
   "rules": {
+    "class-methods-use-this": 0,
     "react/jsx-one-expression-per-line": 0,
     "react/display-name": 0,
     "react/prop-types": 0,
