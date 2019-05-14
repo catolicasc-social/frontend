@@ -50,6 +50,8 @@ const Login = () => (
       <Button
         appearance="primary"
         height={35}
+        width="50%"
+        justifyContent="center"
         marginTop={50}
         iconBefore="log-in"
         isLoading={false}
@@ -59,7 +61,7 @@ const Login = () => (
       </Button>
     </Pane>
 
-    <Heading size={200} color="#C7CED4">
+    <Heading size={200} color="#C7CED4" fontWeight={500}>
       Copyright &copy; {YEAR} Católica - Joinville | Todos os direitos
       reservados.
     </Heading>
