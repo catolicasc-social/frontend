@@ -1,4 +1,4 @@
-import { render } from 'react-testing-library';
+import { render, fireEvent } from 'react-testing-library';
 
 import { Button } from '../Button';
 
@@ -34,5 +34,14 @@ describe('Botão deve', () => {
 
     expect(button.firstChild).toHaveAttribute('delay', '0');
     expect(button).toBeDisabled();
+  });
+
+  test('ser uma vez clicado', () => {
+    const onClick = jest.fn();
+    const { getByText } = render(<Button onClick={onClick}>{SALVAR}</Button>);
+
+    fireEvent.click(getByText(SALVAR));
+
+    expect(onClick).toHaveBeenCalled();
   });
 });
