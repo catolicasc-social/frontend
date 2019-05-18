@@ -6,7 +6,7 @@ const PRODUTOS = 'Produtos';
 
 describe('Alerta deve', () => {
   test('renderizar', () => {
-    const { container } = render(<Modal isShown />);
+    const { container } = render(<Modal isShown>conteúdo</Modal>);
 
     expect(container).toBeInTheDocument();
   });
@@ -18,13 +18,21 @@ describe('Alerta deve', () => {
   });
 
   test('ter título', () => {
-    const { getByText } = render(<Modal title={PRODUTOS} isShown />);
+    const { getByText } = render(
+      <Modal title={PRODUTOS} isShown>
+        conteúdo
+      </Modal>
+    );
 
     expect(getByText(PRODUTOS)).toBeInTheDocument();
   });
 
   test('ter botão custom de salvar', () => {
-    const { getByText } = render(<Modal confirmLabel="Salvar" isShown />);
+    const { getByText } = render(
+      <Modal confirmLabel="Salvar" isShown>
+        conteúdo
+      </Modal>
+    );
 
     expect(getByText('Salvar')).toBeInTheDocument();
   });
