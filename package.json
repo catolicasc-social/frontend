@@ -19,7 +19,7 @@
     "jest-dom": "^3.2.2",
     "lint-staged": "^8.1.7",
     "prettier": "^1.17.1",
-    "react-testing-library": "^7.0.0"
+    "react-testing-library": "^7.0.1"
   },
   "dependencies": {
     "dotenv": "^8.0.0",
