@@ -16,7 +16,7 @@
     "eslint-plugin-react": "^7.13.0",
     "husky": "^2.3.0",
     "jest": "^24.8.0",
-    "jest-dom": "^3.3.0",
+    "jest-dom": "^3.4.0",
     "lint-staged": "^8.1.7",
     "prettier": "^1.17.1",
     "react-testing-library": "^7.0.1"
@@ -24,7 +24,7 @@
   "dependencies": {
     "dotenv": "^8.0.0",
     "evergreen-ui": "^4.16.0",
-    "firebase": "^6.0.2",
+    "firebase": "^6.0.4",
     "next": "^8.1.0",
     "next-auth": "^1.12.1",
     "passport-google-oauth": "^2.0.0",
