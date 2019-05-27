@@ -2,18 +2,18 @@ import { Table } from 'evergreen-ui';
 import { SearchInput } from './SearchInput';
 import { Pane } from './Pane';
 
-const TableHeader = ({ header2 }) => {
+const TableHeader = ({ headerOptions }) => {
   return (
     <Pane display="flex" padding={16} background="tint2" borderRadius={3}>
       <Pane flex={1}>
         <SearchInput placeholder="Pesquisar..." />
       </Pane>
-      <Pane>{header2}</Pane>
+      <Pane>{headerOptions}</Pane>
     </Pane>
   );
 };
 
-const TableCustom = ({ items, header, tableHeight, header2 }) => {
+const TableCustom = ({ items, header, tableHeight, headerOptions }) => {
   const keys = Object.keys(header);
 
   function renderRow(item, index) {
@@ -27,8 +27,8 @@ const TableCustom = ({ items, header, tableHeight, header2 }) => {
   }
 
   return (
-    <Pane border="default">
-      <TableHeader header2={header2} />
+    <Pane border="default" width="100%">
+      <TableHeader headerOptions={headerOptions} />
       <Pane borderTop="default">
         <Table>
           <Table.Head>
@@ -38,7 +38,7 @@ const TableCustom = ({ items, header, tableHeight, header2 }) => {
               </Table.TextHeaderCell>
             ))}
           </Table.Head>
-          <Table.Body height={tableHeight}>
+          <Table.Body height={tableHeight} backgroundColor="#fff">
             {items.map((item, index) => renderRow(item, index))}
           </Table.Body>
         </Table>
