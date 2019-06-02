@@ -1,4 +1,4 @@
-import { render, act } from 'react-testing-library';
+import { render, act } from '@testing-library/react';
 
 import Input from '../Input';
 
