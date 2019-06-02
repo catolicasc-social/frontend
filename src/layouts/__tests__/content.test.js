@@ -6,7 +6,7 @@ const CONTEUDO = 'Conteúdo';
 
 jest.mock('next/link', () => ({ children }) => children);
 
-describe('Alerta deve', () => {
+describe('Conteúdo layout deve', () => {
   test('renderizar', () => {
     const { container } = render(<Content />);
 
@@ -19,7 +19,7 @@ describe('Alerta deve', () => {
     expect(getByText(CONTEUDO)).toBeInTheDocument();
   });
 
-  test('ter ter node filho', () => {
+  test('ter node filho', () => {
     const { getByText } = render(<Content>{CONTEUDO}</Content>);
 
     expect(getByText(CONTEUDO)).toBeInTheDocument();
