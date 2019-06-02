@@ -36,7 +36,7 @@ const getTablist = () => {
 
 const ContainerProducts = ({ children }) => {
   return (
-    <PageTablist title="Produto" items={getTablist()}>
+    <PageTablist title="Produtos" items={getTablist()}>
       {children}
     </PageTablist>
   );
