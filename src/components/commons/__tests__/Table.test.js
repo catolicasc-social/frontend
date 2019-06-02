@@ -1,4 +1,5 @@
-import { render } from 'react-testing-library';
+import { render } from '@testing-library/react';
+
 import Table from '../Table';
 
 const items = [
