@@ -31,7 +31,7 @@ class Error extends React.Component {
   }
 
   handleBack() {
-    Router.push('/login');
+    Router.push('/');
   }
 
   renderContent({ title, description, statusCode }) {

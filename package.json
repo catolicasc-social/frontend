@@ -33,7 +33,9 @@
   },
   "scripts": {
     "dev": "next ./src",
-    "now-build": "next build ./src && next export ./src -o dist",
+    "build": "next build ./src",
+    "start": "next start ./src",
+    "now-build": "next build ./src",
     "lint": "eslint .",
     "test": "jest"
   },

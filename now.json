@@ -2,5 +2,5 @@
   "version": 2,
   "name": "restaurante-popular",
   "alias": "restaurante-popular",
-  "builds": [{ "src": "package.json", "use": "@now/static-build" }]
+  "builds": [{ "src": "next.config.js", "use": "@now/next" }]
 }
