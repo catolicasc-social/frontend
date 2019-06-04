@@ -53,7 +53,7 @@
   },
   "jest": {
     "testPathIgnorePatterns": [
-      "<rootDir>/src/node_modules/"
+      "<rootDir>/node_modules/"
     ],
     "setupFilesAfterEnv": [
       "<rootDir>/jest.setup.js"
