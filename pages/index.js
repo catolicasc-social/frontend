@@ -7,7 +7,7 @@ import { Heading } from '../components/commons/Heading';
 const YEAR = new Date().getFullYear();
 
 const handleLogin = () => {
-  Router.push('/index');
+  Router.push('/dashboard');
 };
 
 const Login = () => (

@@ -2,5 +2,11 @@
   "version": 2,
   "name": "restaurante-popular",
   "alias": "restaurante-popular",
-  "builds": [{ "src": "package.json", "use": "@now/static-build" }]
+  "builds": [{ "src": "package.json", "use": "@now/next" }],
+  "routes": [
+    {
+      "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+",
+      "headers": { "cache-control": "immutable,max-age=31536000" }
+    }
+  ]
 }
