@@ -11,8 +11,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - src-{{ checksum "package.json" }}
-            - src-
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
 
       - run:
           name: Dependencies
@@ -21,7 +21,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: src-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "package.json" }}
 
       - run:
           name: Lint
