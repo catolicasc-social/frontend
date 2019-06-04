@@ -61,11 +61,11 @@ const Menu = () => {
       <div className="wrapper">
         <div className="navigation">
           <img src="/static/logo.png" alt="Logo" />
-          <MenuLink href="/index" text="Dashboard" icon="chart" />
+          <MenuLink href="/dashboard" text="Dashboard" icon="chart" />
           <MenuLink href="/products" text="Produtos" icon="list-detail-view" />
         </div>
         <div className="navigation">
-          <MenuLink href="/login" text="Sair" icon="log-out" last />
+          <MenuLink href="/index" text="Sair" icon="log-out" last />
         </div>
       </div>
 

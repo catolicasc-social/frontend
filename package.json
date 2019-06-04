@@ -25,15 +25,17 @@
     "dotenv": "^8.0.0",
     "evergreen-ui": "^4.17.0",
     "firebase": "^6.1.0",
-    "next": "^8.1.0",
+    "next": "^8.1.1-canary.43",
     "next-auth": "^1.12.1",
     "passport-google-oauth": "^2.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
   "scripts": {
-    "dev": "next ./src",
-    "now-build": "next build ./src && next export ./src -o dist",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "now-build": "next build",
     "lint": "eslint .",
     "test": "jest"
   },
@@ -57,7 +59,7 @@
       "<rootDir>/jest.setup.js"
     ],
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
+      "**/*.{js,jsx}"
     ]
   },
   "babel": {
