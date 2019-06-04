@@ -32,6 +32,7 @@ Aplicação frontend para projeto social de um restaurante popular.
 #### Comandos
 
 - `git clone git@github.com:catolicasc-social/frontend.git`
+- `cd src`
 - `yarn install`
 - `yarn dev`
 
