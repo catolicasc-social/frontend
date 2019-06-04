@@ -9,7 +9,7 @@ jobs:
     working_directory: ~/frontend/src
     steps:
       - checkout
-          path: ~/frontend
+          path: ~/src
 
       - restore_cache:
           keys:
