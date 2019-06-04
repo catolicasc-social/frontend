@@ -6,9 +6,11 @@ jobs:
     docker:
       - image: circleci/node:10.15.0
     parallelism: 3
-    working_directory: ~/src
+    working_directory: ~/frontend/src
     steps:
       - checkout
+          path: ~/frontend
+
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
