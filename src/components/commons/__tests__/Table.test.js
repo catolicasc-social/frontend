@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, fireEvent, cleanup } from '@testing-library/react';
 
 import Table from '../Table';
 
@@ -20,13 +20,15 @@ const items = [
   }
 ];
 
-describe('Tabela deve', () => {
-  test('renderizar', () => {
+describe('A Tabela', () => {
+  afterEach(cleanup);
+
+  test('deve renderizar', () => {
     const { container } = render(<Table items={[]} header={{}} />);
     expect(container).toBeInTheDocument();
   });
 
-  test('possuir todos os headers', () => {
+  test('deve possuir todos os headers', () => {
     const header = { id: 'ID', name: 'Nome', category: 'Categoria' };
     const { getByText } = render(<Table items={items} header={header} />);
     expect(getByText('ID')).toBeInTheDocument();
@@ -34,7 +36,7 @@ describe('Tabela deve', () => {
     expect(getByText('Categoria')).toBeInTheDocument();
   });
 
-  test('possuir todos os items', () => {
+  test('deve possuir todos os items', () => {
     const header = { name: 'Nome' };
     const { getByText } = render(<Table items={items} header={header} />);
     expect(getByText('name1')).toBeInTheDocument();
@@ -42,7 +44,7 @@ describe('Tabela deve', () => {
     expect(getByText('name3')).toBeInTheDocument();
   });
 
-  test('não possuir as propriedades não específicadas', () => {
+  test('não deve possuir as propriedades não específicadas', () => {
     const header = { category: 'Categoria' };
     const { queryByText } = render(<Table items={items} header={header} />);
     expect(queryByText('name1')).toBeNull();
@@ -50,11 +52,61 @@ describe('Tabela deve', () => {
     expect(queryByText('name3')).toBeNull();
   });
 
-  test('renderizar o componente opcional no Header', () => {
+  test('deve renderizar o componente opcional no Header', () => {
     const { container } = render(<div>Teste Custom Header</div>);
     const { getByText } = render(
       <Table items={[]} header={{}} hearderOptions={container} />
     );
     expect(getByText('Teste Custom Header')).toBeInTheDocument();
+  });
+
+  describe('deve filtrar', () => {
+    test('baseado na propriedade passada', () => {
+      const header = { name: 'Nome' };
+      const { getByPlaceholderText, queryByText } = render(
+        <Table items={items} header={header} searchProperty="name" />
+      );
+      const searchInput = getByPlaceholderText('Pesquisar...');
+      fireEvent.change(searchInput, { target: { value: 'name3' } });
+      expect(queryByText('name1')).toBeNull();
+      expect(queryByText('name2')).toBeNull();
+      expect(queryByText('name3')).toBeInTheDocument();
+    });
+
+    test('verificando se o contém parcialmente o texto', () => {
+      const header = { name: 'Nome' };
+      const { getByPlaceholderText, queryByText } = render(
+        <Table items={items} header={header} searchProperty="name" />
+      );
+      const searchInput = getByPlaceholderText('Pesquisar...');
+      fireEvent.change(searchInput, { target: { value: 'name' } });
+      expect(queryByText('name1')).toBeInTheDocument();
+      expect(queryByText('name2')).toBeInTheDocument();
+      expect(queryByText('name3')).toBeInTheDocument();
+    });
+
+    test('ignorando uppercase e lowercase', () => {
+      const header = { name: 'Nome' };
+      const { getByPlaceholderText, queryByText } = render(
+        <Table items={items} header={header} searchProperty="name" />
+      );
+      const searchInput = getByPlaceholderText('Pesquisar...');
+      fireEvent.change(searchInput, { target: { value: 'NAM' } });
+      expect(queryByText('name1')).toBeInTheDocument();
+      expect(queryByText('name2')).toBeInTheDocument();
+      expect(queryByText('name3')).toBeInTheDocument();
+    });
+
+    test('ignorar pesquisa quando a propriedade é inexistente', () => {
+      const header = { name: 'Nome' };
+      const { getByPlaceholderText, queryByText } = render(
+        <Table items={items} header={header} searchProperty="category" />
+      );
+      const searchInput = getByPlaceholderText('Pesquisar...');
+      fireEvent.change(searchInput, { target: { value: 'name1' } });
+      expect(queryByText('name1')).toBeInTheDocument();
+      expect(queryByText('name2')).toBeInTheDocument();
+      expect(queryByText('name3')).toBeInTheDocument();
+    });
   });
 });
