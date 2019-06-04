@@ -61,6 +61,16 @@ describe('A Tabela', () => {
   });
 
   describe('deve filtrar', () => {
+    test('nenhum item quando texto está vazio', () => {
+      const header = { name: 'Nome' };
+      const { queryByText } = render(
+        <Table items={items} header={header} searchProperty="name" />
+      );
+      expect(queryByText('name1')).toBeInTheDocument();
+      expect(queryByText('name2')).toBeInTheDocument();
+      expect(queryByText('name3')).toBeInTheDocument();
+    });
+
     test('baseado na propriedade passada', () => {
       const header = { name: 'Nome' };
       const { getByPlaceholderText, queryByText } = render(

@@ -15,7 +15,7 @@ const TableHeader = ({ headerOptions, onSearchTextChange }) => {
 };
 
 function includesIgnoreCase(a, b) {
-  if (!a || !b) return false;
+  if (!a) return false;
   return a.toUpperCase().includes(b.toUpperCase());
 }
 
