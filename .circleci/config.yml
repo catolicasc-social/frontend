@@ -3,14 +3,12 @@ orbs:
   codecov: codecov/codecov@1.0.4
 jobs:
   build:
-    working_directory: ~/frontend/src
+    working_directory: /root/frontend/src
     docker:
       - image: circleci/node:10.15.0
     parallelism: 3
     steps:
       - checkout
-          path: ~/frontend
-
       - restore_cache:
           keys:
             - src-{{ checksum "package.json" }}
