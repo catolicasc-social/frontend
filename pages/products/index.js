@@ -29,6 +29,7 @@ const Products = () => {
         items={products}
         header={header}
         headerOptions={renderHeaderOptions()}
+        searchProperty="name"
         tableHeight="calc(100vh - 189px)"
       />
     </ContainerProducts>
