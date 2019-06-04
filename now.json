@@ -2,7 +2,7 @@
   "version": 2,
   "name": "restaurante-popular",
   "alias": "restaurante-popular",
-  "builds": [{ "src": "src/package.json", "use": "@now/next" }],
+  "builds": [{ "src": "package.json", "use": "@now/next" }],
   "routes": [
     {
       "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+",
