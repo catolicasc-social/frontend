@@ -24,7 +24,7 @@
   "dependencies": {
     "dotenv": "^8.0.0",
     "evergreen-ui": "^4.17.0",
-    "firebase": "^6.1.0",
+    "firebase": "^6.1.1",
     "next": "^8.1.1-canary.47",
     "next-auth": "^1.12.1",
     "passport-google-oauth": "^2.0.0",
