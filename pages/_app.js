@@ -2,6 +2,8 @@ import React from 'react';
 import App, { Container } from 'next/app';
 import Head from 'next/head';
 
+import logo from '../static/images/logo.ico';
+
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
@@ -21,7 +23,7 @@ class MyApp extends App {
         <Head>
           <title>Restaurante Popular</title>
 
-          <link rel="icon" href="/static/logo.png" type="image/png" />
+          <link rel="icon" href={logo} type="image/png" />
         </Head>
         <Component {...pageProps} />
 

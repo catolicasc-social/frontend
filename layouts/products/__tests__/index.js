@@ -8,8 +8,8 @@ jest.mock('next/link', () => ({ children }) => children);
 
 describe('Conteúdo Tablist layout deve', () => {
   test('renderizar', () => {
-    const { container, debug } = render(<ContainerProducts />);
-    debug();
+    const { container } = render(<ContainerProducts />);
+
     expect(container).toBeInTheDocument();
   });
 

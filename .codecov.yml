@@ -5,4 +5,9 @@ coverage:
     changes: off
   fixes:
     - '::/'
+  ignore:
+    - '__mocks__'
+    - 'config/**/*'
+    - 'jest.setup.js'
+    - 'next.config.js'
 comment: off
