@@ -4,6 +4,8 @@ import { Pane } from '../components/commons/Pane';
 import { Button } from '../components/commons/Button';
 import { Heading } from '../components/commons/Heading';
 
+import logo from '../static/images/logo.png';
+
 const YEAR = new Date().getFullYear();
 
 const handleLogin = () => {
@@ -26,7 +28,7 @@ const Login = () => (
       alignItems="center"
       justifyContent="center"
     >
-      <img src="/static/logo.png" alt="Logo" />
+      <img src={logo} alt="Logo" />
       <Heading size={700} color="#425A70">
         Restaurante Popular
       </Heading>

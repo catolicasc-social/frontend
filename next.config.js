@@ -6,6 +6,7 @@ module.exports = withPlugins(
     [
       optimizedImages,
       {
+        handleImages: ['png', 'svg', 'ico'],
         optipng: {
           optimizationLevel: 3
         }
