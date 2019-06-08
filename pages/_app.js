@@ -21,7 +21,7 @@ class MyApp extends App {
         <Head>
           <title>Restaurante Popular</title>
 
-          <link rel="icon" href="/static/logo.png" type="image/png" />
+          <link rel="icon" href="/static/images/logo.png" type="image/png" />
         </Head>
         <Component {...pageProps} />
 

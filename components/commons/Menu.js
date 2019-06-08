@@ -2,6 +2,8 @@ import { withRouter } from 'next/router';
 import Link from 'next/link';
 import { Icon, Text } from 'evergreen-ui';
 
+import logo from '../../static/images/logo.png';
+
 const Menu = () => {
   const MenuLink = withRouter(({ router, href, icon, text, last = false }) => {
     const isActive = router.pathname.match(href);
@@ -60,7 +62,7 @@ const Menu = () => {
     <nav>
       <div className="wrapper">
         <div className="navigation">
-          <img src="/static/logo.png" alt="Logo" />
+          <img src={logo} alt="Logo" />
           <MenuLink href="/dashboard" text="Dashboard" icon="chart" />
           <MenuLink href="/products" text="Produtos" icon="list-detail-view" />
         </div>
