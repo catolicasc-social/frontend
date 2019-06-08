@@ -7,7 +7,7 @@ coverage:
     - '::/'
   ignore:
     - '__mocks__'
-    - 'config'
+    - 'config/**/*'
     - 'jest.setup.js'
     - 'next.config.js'
 comment: off
