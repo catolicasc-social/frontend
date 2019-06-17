@@ -1,27 +1,27 @@
 import { render } from '@testing-library/react';
 
-import Modal from '../Modal';
+import Dialog from '../Dialog';
 
 const PRODUTOS = 'Produtos';
 
 describe('Alerta deve', () => {
   test('renderizar', () => {
-    const { container } = render(<Modal isShown>conteúdo</Modal>);
+    const { container } = render(<Dialog isShown>conteúdo</Dialog>);
 
     expect(container).toBeInTheDocument();
   });
 
   test('ter node filho', () => {
-    const { getByText } = render(<Modal isShown>{PRODUTOS}</Modal>);
+    const { getByText } = render(<Dialog isShown>{PRODUTOS}</Dialog>);
 
     expect(getByText(PRODUTOS)).toBeInTheDocument();
   });
 
   test('ter título', () => {
     const { getByText } = render(
-      <Modal title={PRODUTOS} isShown>
+      <Dialog title={PRODUTOS} isShown>
         conteúdo
-      </Modal>
+      </Dialog>
     );
 
     expect(getByText(PRODUTOS)).toBeInTheDocument();
@@ -29,9 +29,9 @@ describe('Alerta deve', () => {
 
   test('ter botão custom de salvar', () => {
     const { getByText } = render(
-      <Modal confirmLabel="Salvar" isShown>
+      <Dialog confirmLabel="Salvar" isShown>
         conteúdo
-      </Modal>
+      </Dialog>
     );
 
     expect(getByText('Salvar')).toBeInTheDocument();

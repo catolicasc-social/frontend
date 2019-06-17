@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import { IconButton } from 'evergreen-ui';
 
 import ContainerProducts from '../../layouts/products';
 import Table from '../../components/commons/Table';
+import Dialog from '../../components/commons/Dialog';
 
 const getProducts = () => {
   const products = [];
@@ -18,20 +20,35 @@ const getProducts = () => {
   return { products, header };
 };
 
-const renderHeaderOptions = () => <IconButton flex={1} icon="plus" />;
+const renderHeaderOptions = onClick => (
+  <IconButton flex={1} icon="plus" onClick={onClick} />
+);
 
 const Products = () => {
+  const [isShownDialog, setIsShownDialog] = useState(false);
   const { products, header } = getProducts();
+
+  const handleDialog = () => setIsShownDialog(!isShownDialog);
 
   return (
     <ContainerProducts>
       <Table
         items={products}
         header={header}
-        headerOptions={renderHeaderOptions()}
+        headerOptions={renderHeaderOptions(handleDialog)}
         searchProperty="name"
         tableHeight="calc(100vh - 189px)"
       />
+      <Dialog
+        title="Adicionar produto"
+        confirmLabel="Confirmar"
+        cancelLabel="Cancelar"
+        preventBodyScrolling
+        isShown={isShownDialog}
+        onCloseComplete={handleDialog}
+      >
+        teste
+      </Dialog>
     </ContainerProducts>
   );
 };
