@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Table } from 'evergreen-ui';
+
 import { SearchInput } from './SearchInput';
 import { Pane } from './Pane';
+import { Text } from './Text';
 
 const TableHeader = ({ headerOptions, onSearchTextChange }) => {
   return (
@@ -13,6 +15,20 @@ const TableHeader = ({ headerOptions, onSearchTextChange }) => {
     </Pane>
   );
 };
+
+const TableEmpty = ({ isSearching, sizeItems }) => (
+  <Pane
+    display="flex"
+    justifyContent="center"
+    alignItems="center"
+    padding={16}
+    height="100%"
+  >
+    <Text size={500}>
+      {isSearching ? 'Nada foi encontrado' : sizeItems === 0 && 'Lista vazia'}
+    </Text>
+  </Pane>
+);
 
 function includesIgnoreCase(a, b) {
   if (!a) return false;
@@ -69,7 +85,14 @@ const TableCustom = ({
             ))}
           </Table.Head>
           <Table.Body height={tableHeight} backgroundColor="#fff">
-            {filteredItems.map((item, index) => renderRow(item, index))}
+            {filteredItems.length ? (
+              filteredItems.map((item, index) => renderRow(item, index))
+            ) : (
+              <TableEmpty
+                isSearching={!!searchText.length}
+                sizeItems={items.length}
+              />
+            )}
           </Table.Body>
         </Table>
       </Pane>
