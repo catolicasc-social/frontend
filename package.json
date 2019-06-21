@@ -24,7 +24,7 @@
   "dependencies": {
     "dotenv": "^8.0.0",
     "evergreen-ui": "^4.17.0",
-    "firebase": "^6.2.0",
+    "firebase": "^6.2.1",
     "imagemin-optipng": "^7.0.0",
     "next": "^8.1.0",
     "next-auth": "^1.12.1",
