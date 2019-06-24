@@ -6643,10 +6643,10 @@ next-compose-plugins@^2.2.0:
   resolved "https://registry.yarnpkg.com/next-compose-plugins/-/next-compose-plugins-2.2.0.tgz#95cd8eb40ab0652070d76572fb648354191628b0"
   integrity sha512-ChUlpT9tWfJ7YxqGw/WQ2T1gf8EeX93n1XqeQw0lkvGa7seszahvF4eOZUJoq7Hetsbzg4UHVnPoCXfXTyQR3g==
 
-next-optimized-images@^2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/next-optimized-images/-/next-optimized-images-2.5.1.tgz#074b79b8280bd38fadeda5acbc4fc58295670708"
-  integrity sha512-5/qcxsneO0phfWJ0LXOTEwE7Xs5pZ2dg18abfK0vVvG8kegXge8aX3gu3fHLobRZA24HYwDDLo2ody7ekStSsQ==
+next-optimized-images@^2.5.3:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/next-optimized-images/-/next-optimized-images-2.5.3.tgz#40b8f0f98917742e3262d5b4ffac68ee09cfee30"
+  integrity sha512-eyTGBluzqZVZCqq5/+B+CoKWZJ8+ooIj7b4Z7jvQ38vVBOfZy4MeIh4oHrnk3KD4HM9qU/xDKBZuV6sgXSusdw==
   dependencies:
     chalk "^2.4.2"
     figures "^3.0.0"
