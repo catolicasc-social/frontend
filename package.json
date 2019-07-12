@@ -26,7 +26,7 @@
     "evergreen-ui": "^4.18.1",
     "firebase": "^6.2.4",
     "imagemin-optipng": "^7.0.0",
-    "next": "^9.0.0",
+    "next": "^9.0.1",
     "next-auth": "^1.12.1",
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.5.3",
