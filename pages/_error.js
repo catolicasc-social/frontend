@@ -1,5 +1,7 @@
 import React from 'react';
 import Router from 'next/router';
+import Error from 'next/error';
+import * as Sentry from '@sentry/node';
 
 import { Button } from '../components/commons/Button';
 import { Text } from '../components/commons/Text';
@@ -24,10 +26,36 @@ const errors = {
   }
 };
 
-class Error extends React.Component {
-  static getInitialProps({ res, xhr }) {
-    const statusCode = res ? res.statusCode : xhr ? xhr.status : null;
-    return { statusCode };
+class ErrorCustom extends React.Component {
+  static async getInitialProps({ res, err, asPath }) {
+    const errorInitialProps = await Error.getInitialProps({ res, err });
+
+    errorInitialProps.hasGetInitialPropsRun = true;
+
+    if (res) {
+      if (res.statusCode === 404) {
+        return { statusCode: 404 };
+      }
+
+      if (err) {
+        Sentry.captureException(err);
+
+        return errorInitialProps;
+      }
+    } else if (err) {
+      Sentry.captureException(err);
+
+      return errorInitialProps;
+    }
+
+    Sentry.captureException(
+      new Error(`_error.js getInitialProps missing data at path: ${asPath}`)
+    );
+
+    return errorInitialProps;
+
+    /* const statusCode = res ? res.statusCode : xhr ? xhr.status : null;
+    return { statusCode }; */
   }
 
   handleBack() {
@@ -91,4 +119,4 @@ class Error extends React.Component {
   }
 }
 
-export default Error;
+export default ErrorCustom;

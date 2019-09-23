@@ -1,8 +1,13 @@
 import React from 'react';
 import App, { Container } from 'next/app';
 import Head from 'next/head';
+import * as Sentry from '@sentry/browser';
 
 import logo from '../static/images/logo.ico';
+
+Sentry.init({
+  dsn: 'https://240293187c514562905394775ca91481@sentry.io/1449043'
+});
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -16,7 +21,8 @@ class MyApp extends App {
   }
 
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps, err } = this.props;
+    const modifiedPageProps = { ...pageProps, err };
 
     return (
       <Container>
@@ -25,7 +31,7 @@ class MyApp extends App {
 
           <link rel="icon" href={logo} type="image/png" />
         </Head>
-        <Component {...pageProps} />
+        <Component {...modifiedPageProps} />
 
         <style jsx global>
           {`
