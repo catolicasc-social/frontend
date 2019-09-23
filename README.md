@@ -37,6 +37,10 @@ Aplicação frontend para projeto social de um restaurante popular.
 
 Depois dos comandos executados, ir para http://localhost:3000
 
+## Changelog
+
+https://github.com/catolicasc-social/frontend/releases
+
 ## Contribuindo
 
 Siga os passos [aqui](CONTRIBUTING.md) para saber como contribuir com o projeto.
