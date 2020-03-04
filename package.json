@@ -9,7 +9,7 @@
     "@babel/preset-react": "^7.0.0",
     "@testing-library/react": "^8.0.4",
     "@zeit/next-source-maps": "^0.0.3",
-    "codecov": "^3.5.0",
+    "codecov": "^3.6.5",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^6.0.0",
